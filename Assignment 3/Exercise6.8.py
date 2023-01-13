@@ -3,7 +3,7 @@
 hunreds=["one","two","three","four","five",
                    "six","seven","eight","nine"]
 
-teen=['eleven','twelve','thirteen','fourteen','fifteen','sixteen',
+teen=['ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen',
       'seventeen','eighteen','nineteen']
 
 ty=['twenty','thirty','forty','fifty','sixty',
@@ -16,19 +16,22 @@ if check > 100 :
         if i==(check//100)-1:
             print(f'{str.upper(hunreds[i])} HUNRED',end=' ')
 
-
 for j in range(len(teen)):
-    if (check%100) < 20:
-        if j==int(((check%100)%10))-2:
+    if 10 <= (check%100) < 20:
+        if j==int(((check%100)%10)):
             print(f'{str.upper(teen[j])}',end=' ')
-    else:
+    elif (check%100) >= 20:
         if j==int(((check%100)//10))-2:
             print(f'{str.upper(ty[j])}',end=' ')
             for k in range(len(hunreds)):
                 if k==int((check%10))-1:
                     print(f'{str.upper(hunreds[k])}',end=' ')
+    elif (check%100) < 10:
+        if j==int((check%10))-1:
+            print(f'{str.upper(hunreds[j])}',end=' ')
 
 print(f'AND {int(round((check%1),2)*100)}/100')
+
 
 #method 2
 number_to_word = {
