@@ -28,7 +28,7 @@ for j in range(len(teen)):
                 if k==int((check%10))-1:
                     print(f'{str.upper(hunreds[k])}',end=' ')
 
-print(f'AND {int((check%1)*100)}/100')
+print(f'AND {int(round((check%1),2)*100)}/100')
 
 #method 2
 number_to_word = {
