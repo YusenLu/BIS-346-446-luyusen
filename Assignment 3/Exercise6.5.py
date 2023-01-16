@@ -2,6 +2,7 @@
 text = str.lower(input('Enter a sentence:'))
 
 word_count={}
+# You never list and count the words    -5
 for word in text.split():
     if word.isalpha():
         if word in word_count:
